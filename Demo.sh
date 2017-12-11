@@ -1,6 +1,6 @@
 if [ -d $1 ]; then
   echo '存在'
-  exit
+  exit 1
 else
   mkdir $1
   cd $1
@@ -12,5 +12,6 @@ else
   echo 'h1{color: red;}' > css/style.css
   echo 'var string = "Hello World"
   alert(string)' > js/main.js
-  exit
+  echo '成功'
+  exit 0
 fi
